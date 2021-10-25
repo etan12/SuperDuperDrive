@@ -11,6 +11,9 @@
     <body class="p-3 mb-2 bg-light text-black">
         <div class="container justify-content-center w-25 p-3" style="background-color: #eeeeee; margin-top: 5em;">
             <h1 class="display-5">Login</h1>
+            <div class="alert alert-success" th:if="${successMessage}">
+                <p th:text="${successMessage}">Success Message</p>
+            </div>
             <form action="#" th:action="@{/login}" method="POST">
                 <div class="alert alert-danger" th:if="${param.error}">
                     Invalid username or password
